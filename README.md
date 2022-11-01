@@ -1,4 +1,5 @@
 # Practical_Application_III
+
  In this practical application, the goal is to compare the performance of the classifiers, namely K Nearest Neighbor, Logistic Regression, Decision Trees, and <br /> Support Vector Machines. A dataset related to marketing bank products over the telephone was used. <br />
  
  The provided dataset contains information on 411K results of marketing campaign and the goal is to help provide features that will help the client a bank improve their efficency of markerting campaigns. This is to done by building an accurate model <br />
@@ -6,7 +7,7 @@
 The data set had 21 columns of which 10 were numerical and rest categorical. <br />
 <p>&nbsp;</p>
 
-Accuracy metric used for this analysis <br />
+#### Accuracy metric used for this analysis <br />
 As the data was imbalanced , area under the roc_curve was used as a metric for comparing the different models. High AUC for ROC curve <br />
 implies both high TPR and low FPR which is what is needed with the imbalanced classification case. All models were checked with probabilites as a measure as<br />
 as the thresholds may be changed to impact the predictions.
@@ -16,7 +17,7 @@ a)Part 1: using columns 1-7 <br />
 b)Part2: using all columns <br />
 
 
-Part 1: 
+#### Part 1: 
 Following 7 columns were used:
 'age', 'job', 'marital', 'education', 'default', 'housing', 'loan' <br />
 Age was the only numerical columnn - all others were categorical data <br />
@@ -27,11 +28,11 @@ Models :
 Five models were ran and ran their default settings. They were Naive-Bayes,Logistic Regression,KNN,Decision Tree and Support Vector Machine.<br />
                                    
 Results:.<br />
-## In terms of AUC terms,Logistic regression was the only model performing better than the baseline Naive bayes model<br />
-## In prediction terms SVM was doing the best as it give 42% accuracy for class 1<br />
+1)In terms of AUC terms,Logistic regression was the only model performing better than the baseline Naive bayes model<br />
+ 2)In prediction terms SVM was doing the best as it give 42% accuracy for class 1<br />
 
 
-Part2: Improving the model <br />
+#### Part2: Improving the model <br />
 
 All columns in the dataset were used. Remaining Categorical columns were  grouped into two buckets for the purpose of analysis. <br />
 The reduction in number of categories was done to reduce the curse of dimensionality <br />
@@ -67,7 +68,8 @@ c)nr.employed
 d)ontact_cellular
 e)emp.var.rate
 3) In case coefficients vary significantly when changing the input dataset their robustness <br />
-is not guaranteed, and they should probably be interpreted with caution and so a variability test was also done to show the variability among feature coefficients  <br />
+is not guaranteed, and they should probably be interpreted with caution and so a variability test was also done to show the variability among feature <br />
+ coefficients<br />
 4) All models gave a >0.9 AUC with test data but with much shorter running time and ease to take out features logistic regression come out to top for this dataset.
 A summary dataframe and plots are shown at the end which will provide a good snapshot of performance  <br />
 
